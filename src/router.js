@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import tables from './views/tables.vue'
 import index from './views/index.vue'
+import Presenting from './assets/Presenting.js'
 Vue.use(Router)
 
 export default new Router({
@@ -31,6 +32,7 @@ export default new Router({
       path: '/Home',
       name: 'Home',
       component: Home
-    }
+    },
+    Presenting
   ]
 })

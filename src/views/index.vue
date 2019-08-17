@@ -127,7 +127,7 @@
     </el-container>
     <el-footer width="200px">
       <!-- Aside content -->
-      底部11
+      底部
     </el-footer>
   </el-container>
 </template>
