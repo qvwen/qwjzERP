@@ -1,12 +1,7 @@
 <template>
   <el-container style="height:100vh">
-    <!--    height="50%"
-    v-loading="flas"
-    element-loading-text="努力加载中"
-    element-loading-spinner="el-icon-loading"
-    element-loading-background="rgba(0, 0, 0, 0.8)"-->
+    
     <el-header>
-      <!-- Aside content -->
       <el-menu
         :default-active="activeIndex"
         class="el-menu-demo"
@@ -27,13 +22,7 @@
           <i :class="temp.icon"></i>
           {{temp.meta.title}}
         </el-menu-item>
-        <!-- <el-menu-item index="3">订单管理</el-menu-item>
-        -->
-        <!-- <el-submenu index="5" style=" margin-left: 60%;">
-          <template slot="title">设置</template>
-          <el-menu-item index="5-1">锁屏</el-menu-item>
-          <el-menu-item index="5-2">注销</el-menu-item>
-        </el-submenu>-->
+       
         <el-submenu index="4">
           <template slot="title">
             <i class="el-icon-document el-icon-left"></i>我的工作台
@@ -51,12 +40,7 @@
           <el-menu-item index="2-4">
             <i class="el-icon-switch-button"></i>注销
           </el-menu-item>
-          <!-- <el-submenu index="2-4">
-            <template slot="title">选项4</template>
-            <el-menu-item index="2-4-1">选项1</el-menu-item>
-            <el-menu-item index="2-4-2">选项2</el-menu-item>
-            <el-menu-item index="2-4-3">选项3</el-menu-item>
-          </el-submenu>-->
+         
         </el-submenu>
       </el-menu>
     </el-header>
@@ -74,7 +58,7 @@
           :collapse="isCollapse"
           :router="true"
         >
-          <!-- :router="true" -->
+         
           <el-submenu
             width="400"
             v-for="(temp,index) in atpresent"
@@ -91,30 +75,15 @@
               :index="temp1.name"
               @click="addTab(temp1.name,temp1.meta.title)"
               v-bind:key="(temp1,index1)"
-            >{{temp1.meta.title}}+{{temp1.name}}</el-menu-item>
-            <!-- <el-submenu   v-for="(temp1,index1) in temp.jurisdiction" :index="index+'-'+index1" >
-              <span slot="title">
-                <i class="el-icon-document el-icon-left"></i>{{temp1.name}}
-              </span>
-              <el-menu-item index="1-3" @click="addTab('b','项目设定')">
-                <i class="el-icon-setting"></i>项目设定
-              </el-menu-item>
-            </el-submenu>-->
-
-            <!-- <el-submenu index="1-2">
-              <span slot="title">选项4</span>
-              <el-menu-item index="1-2-1">选项1</el-menu-item>
-            </el-submenu>-->
+            >{{temp1.meta.title}}</el-menu-item>
+             
           </el-submenu>
-          <!-- <el-menu-item index="4">
-            <i class="el-icon-setting"></i>
-            <span slot="title">导航四</span>
-          </el-menu-item>-->
+       
         </el-menu>
       </el-aside>
 
       <el-main>
-        <!-- Main content -->
+       
         <el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
           <el-tab-pane
             v-for="item in editableTabs"
@@ -226,7 +195,7 @@ export default {
         });
         this.editableTabsValue = newTabName;
       }
-      alert(JSON.stringify(this.editableTabs))
+     
   //    alert(JSON.stringify(this.editableTabs))
     },
     removeTab(targetName) {

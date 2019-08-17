@@ -9,6 +9,7 @@ import CreditMenu from './assets/CreditMenu'
 import InventoryMenu from './assets/InventoryMenu'
 import SaleMenu from './assets/SaleMenu'
 import purchasing from './assets/purchasing'
+import addsection  from './views/quwenjia/addsection'
 Vue.use(Router)
 
 export default new Router({
