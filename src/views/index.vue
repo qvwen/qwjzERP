@@ -19,13 +19,13 @@
 
         <!-- disabled -->
         <el-menu-item
-          v-for="(temp,index) in this.$store.state.user.role.jurisdiction"
+          v-for="(temp,index) in menuList"
           :index="index"
-          @click="atpresents(temp.jurisdiction)"
+          @click="atpresents(temp.children)"
           v-bind:key="(temp,index)"
         >
           <i :class="temp.icon"></i>
-          {{temp.name}}
+          {{temp.meta.title}}
         </el-menu-item>
         <!-- <el-menu-item index="3">订单管理</el-menu-item>
         -->
@@ -72,6 +72,7 @@
           @open="handleOpen"
           @close="handleClose"
           :collapse="isCollapse"
+          :router="true"
         >
           <!-- :router="true" -->
           <el-submenu
@@ -79,17 +80,18 @@
             v-for="(temp,index) in atpresent"
             :index="index"
             v-bind:key="(temp,index)"
+            
           >
             <template slot="title">
               <i class="el-icon-folder-checked"></i>
-              <span slot="title">{{temp.name}}</span>
+              <span slot="title">{{temp.meta.title}}</span>
             </template>
             <el-menu-item
-              v-for="(temp1,index1) in temp.jurisdiction"
-              :index="index+'-'+index1"
-              @click="addTab('b','项目设定')"
+              v-for="(temp1,index1) in temp.children"
+              :index="temp1.name"
+              @click="addTab(temp1.name,temp1.meta.title)"
               v-bind:key="(temp1,index1)"
-            >{{temp1.name}}</el-menu-item>
+            >{{temp1.meta.title}}+{{temp1.name}}</el-menu-item>
             <!-- <el-submenu   v-for="(temp1,index1) in temp.jurisdiction" :index="index+'-'+index1" >
               <span slot="title">
                 <i class="el-icon-document el-icon-left"></i>{{temp1.name}}
@@ -189,7 +191,8 @@ export default {
       currentPage2: 5,
       currentPage3: 5,
       currentPage4: 4,
-      isCollapse: false
+      isCollapse: false,
+      menuList:[]
     };
   },
   methods: {
@@ -223,6 +226,8 @@ export default {
         });
         this.editableTabsValue = newTabName;
       }
+      alert(JSON.stringify(this.editableTabs))
+  //    alert(JSON.stringify(this.editableTabs))
     },
     removeTab(targetName) {
       let tabs = this.editableTabs;
@@ -241,8 +246,20 @@ export default {
       this.editableTabs = tabs.filter(tab => tab.name !== targetName);
     },
     atpresents(obj) {
+      // alert(JSON.stringify(obj));
       this.atpresent = obj;
     }
-  }
+  }, //生命周期 - 创建完成（可以访问当前this实例）
+    created() {
+        // alert(JSON.stringify(this.$router.options.routes))
+        this.$router.options.routes.forEach(ele => {
+            if(ele.meta){
+                // console.log(ele)
+                this.menuList.push(ele);
+            }
+         
+        })
+        // alert(JSON.stringify(this.menuList))
+    }
 };
 </script>
