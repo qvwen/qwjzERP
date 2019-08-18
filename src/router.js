@@ -10,6 +10,12 @@ import InventoryMenu from './assets/InventoryMenu'
 import SaleMenu from './assets/SaleMenu'
 import purchasing from './assets/purchasing'
 import addsection  from './views/quwenjia/addsection'
+import stock from './views/wen/stocking.vue'
+import allot from './views/wen/allot.vue'
+import pricea from './views/wen/priceadjustment.vue'
+import payee from './views/wen/payee.vue'
+import stockaccount from './views/wen/stockaccount'
+import dull from './views/wen/dull'
 Vue.use(Router)
 
 export default new Router({
@@ -24,12 +30,14 @@ export default new Router({
           name: 'ss',
           components: {
             default: index,
-            a: tables,
-             b: Home
-            // dept: () => import('./views/tables.vue'),
-            //  program: () => import('./views/tables.vue'),
-            //  area: () => import('./views/tables.vue'),
-            //  tax: () => import('./views/tables.vue')
+             a: tables,
+             b: Home,
+            //  dept: tables,
+            //  program:tables,
+            //  area:tables,
+            //  tax:tables, 
+            //  accountsReceivable:tables,
+            //  payable:tables
           }
         }, 
         {

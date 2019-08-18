@@ -1,14 +1,14 @@
 // 库存管理
-const commonMenu = {
+const InventoryMenu = {
     path:"",
     name:"inventory",
-    component: () => import('../views/tables.vue'),
+    component: () => import('../views/index.vue'),
     meta:{
         icon: "",
         title: "库存管理",
         permission:""
     },
-    jurisdiction:[
+    children:[
         // 基本资料
         {
             path: "",
@@ -18,8 +18,7 @@ const commonMenu = {
                 title: "基本资料",
                 permission:""
             },
-            component: () => import('../views/tables.vue'),
-            jurisdiction:[
+             children:[
                 {
                     path:"/warehouseType",
                     icon: "",
@@ -28,10 +27,7 @@ const commonMenu = {
                         icon: "",
                         title: "入库类型设定",
                         permission:""
-                    },
-                    components: {
-                        warehouseType: () => import('../views/tables.vue') 
-                    }
+                    } 
                 },
                 {
                     path:"/delivery",
@@ -53,26 +49,25 @@ const commonMenu = {
                 icon: "",
                 title: "其他出入库作业",
                 permission:""
+            },components:{
+                intostock:() => import('../views/wen/intostock.vue'),
+                outstocks:() => import('../views/liaoshuanchen/chuku.vue')
             },
-            component: () => import('../views/tables.vue'),
-            jurisdiction:[
+             children:[
                 {
-                    path:"/warehouseOther",
+                    path:"/intostock",
                     icon: "",
-                    name: "warehouseOther",
+                    name: "intostock",
                     meta: {
                         icon: "",
                         title: "其他入库单",
                         permission:""
-                    },
-                    components: {
-                        warehouseOther: () => import('../views/tables.vue') 
-                    }
+                    } 
                 },
                 {
-                    path:"/deliveryOther",
+                    path:"/outstocks",
                     icon: "",
-                    name: "deliveryOther",
+                    name: "outstocks",
                     meta: {
                         icon: "",
                         title: '其他出库单',
@@ -89,20 +84,20 @@ const commonMenu = {
                 title: "调拨盘点作业",
                 permission:""
             },
-            component: () => import('../views/tables.vue'),
-            jurisdiction:[
+            components:{
+                checks: () =>  import('../views/wen/stocking.vue'),
+                allots:() =>  import('../views/wen/allot.vue')
+            },
+             children:[
                 {
-                    path:"/allot",
+                    path:"/allots",
                     icon: "",
-                    name: "allot",
+                    name: "allots",
                     meta: {
                         icon: "",
                         title: "调拨单",
                         permission:""
-                    },
-                    components: {
-                        allot: () => import('../views/tables.vue') 
-                    }
+                    } 
                 },
                 {
                     path:"/checkCard",
@@ -112,22 +107,16 @@ const commonMenu = {
                         icon: "",
                         title: "打印盘点卡",
                         permission:""
-                    },
-                    components: {
-                        checkCard: () => import('../views/tables.vue') 
-                    }
+                    } 
                 },
                 {
-                    path:"/check",
+                    path:"/checks",
                     icon: "",
-                    name: "check",
+                    name: "checks",
                     meta: {
                         icon: "",
                         title: "盘点单",
                         permission:""
-                    },
-                    components: {
-                        check: () => import('../views/tables.vue') 
                     }
                 }
             ]
@@ -140,24 +129,23 @@ const commonMenu = {
                 title: "调价作业",
                 permission:""
             },
-            component: () => import('../views/tables.vue'),
-            jurisdiction:[
+            components:{
+                saleInvoiceOuts: () =>  import('../views/wen/stockaccount.vue') 
+            },
+             children:[
                 {
-                    path:"/saleInvoiceOut",
+                    path:"/saleInvoiceOuts",
                     icon: "",
-                    name: "saleInvoiceOut",
+                    name: "saleInvoiceOuts",
                     meta: {
                         icon: "",
                         title: "调价单",
                         permission:""
-                    },
-                    components: {
-                        saleInvoiceOut: () => import('../views/tables.vue') 
-                    }
+                    } 
                 }
             ]
         }
     ]
 }
 
-export default commonMenu;
+export default InventoryMenu;

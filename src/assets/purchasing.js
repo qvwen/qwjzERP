@@ -2,13 +2,13 @@
 const purchasing = {
     path:"",
     name:"purchase",
-    component: () => import('../views/tables.vue'),
-    meta:{
+    component: () => import('../views/index.vue'),
+     meta:{
         icon: "",
         title: "采购管理",
         permission:""
     },
-    jurisdiction:[
+    children:[
         // 基本资料
         {
             path: "",
@@ -18,8 +18,7 @@ const purchasing = {
                 title: "基本资料",
                 permission:""
             },
-            component: () => import('../views/tables.vue'),
-            jurisdiction:[
+                        children:[
                 {
                     path:"/purchaseRequireType",
                     icon: "",
@@ -61,38 +60,61 @@ const purchasing = {
             name:"purchaseOperation",
             meta:{
                 icon: "",
-                title: "采购订单",
+                title: "采购作业",
                 permission:""
+            },components: {
+                purchaseStorage: () => import('../views/luoq/purchasereceipt.vue'),
+                purchaseReturn:() => import('../views/luoq/index.vue'),
+                allowance:() => import('../views/chenghan/allowance.vue'),
+                enquir:() => import('../views/chenghan/enquiry.vue'),
+                purchaseInvoice:() => import('../views/chenghan/purchaseInvoice.vue'),
+                purchasing:()=> import('../views/chenghan/purchasing.vue'),
+                requisition:()=> import('../views/chenghan/requisition.vue'),
+                warehousing:()=> import('../views/chenghan/warehousing.vue')
             },
-            component: () => import('../views/tables.vue'),
-            jurisdiction:[
+             children:[
                 {
-                    path:"/purchaseEnquiry",
+                    path:"/enquir",
                     icon: "",
-                    name: "purchaseEnquiry",
+                    name: "enquir",
                     meta: {
                         icon: "",
                         title: "采购询价单",
                         permission:""
-                    },
-                    components: {
-                        purchaseEnquiry: () => import('../views/tables.vue') 
+                    }
+                }, {
+                    path:"/purchasing",
+                    icon: "",
+                    name: "purchasing",
+                    meta: {
+                        icon: "",
+                        title: "采购订单",
+                        permission:""
                     }
                 },
                 {
-                    path:"/purchaseRequisitions",
+                    path:"/requisition",
                     icon: "",
-                    name: "purchaseRequisitions",
+                    name: "requisition",
                     meta: {
                         icon: "",
                         title: '采购请购单',
                         permission:""
                     }
+                }, {
+                    path:"/allowance",
+                    icon: "",
+                    name: "allowance",
+                    meta: {
+                        icon: "",
+                        title: '采购折让确认单',
+                        permission:""
+                    }
                 },
                 {
-                    path:"purchaseStorage",
+                    path:"/warehousing",
                     icon: "",
-                    name: "purchaseStorage",
+                    name: "warehousing",
                     meta: {
                         icon: "",
                         title: '采购入库单',
@@ -128,9 +150,10 @@ const purchasing = {
                 icon: "",
                 title: "分摊作业",
                 permission:""
+            },components: {
+                apportionWork:()=>import("../views/luoq/procurementallocation.vue")
             },
-            component: () => import('../views/tables.vue'),
-            jurisdiction:[
+             children:[
                 {
                     path:"/apportionWork",
                     icon: "",
@@ -139,10 +162,7 @@ const purchasing = {
                         icon: "",
                         title: "采购分摊作业",
                         permission:""
-                    },
-                    components: {
-                        apportionWork: () => import('../views/tables.vue') 
-                    }
+                    } 
                 }
             ]
         }
