@@ -64,7 +64,8 @@ const purchasing = {
                 permission:""
             },components: {
                 purchaseStorage: () => import('../views/luoq/purchasereceipt.vue'),
-                purchaseReturn:() => import('../views/luoq/index.vue'),
+                // purchaseReturn:() => import('../views/luoq/index.vue'),
+                purchaseReturn:() => import('../views/chenghan/refund.vue'),
                 allowance:() => import('../views/chenghan/allowance.vue'),
                 enquir:() => import('../views/chenghan/enquiry.vue'),
                 purchaseInvoice:() => import('../views/chenghan/purchaseInvoice.vue'),

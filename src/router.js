@@ -32,7 +32,7 @@ export default new Router({
             default: index,
              a: tables,
              b: Home,
-            //  dept: tables,
+            //  dept: tables,]
             //  program:tables,
             //  area:tables,
             //  tax:tables, 

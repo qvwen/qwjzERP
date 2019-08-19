@@ -118,9 +118,8 @@ const commonMenu = {
                 title: "调拨盘点作业",
                 permission: ""
             },components:{
-                allot:() => import('../views/tables.vue'),
+                allot:() => import('../views/wen/allot.vue'),
                 checkCard:() => import('../views/tables.vue'),
-           
             },
             children: [
                 {

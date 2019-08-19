@@ -19,15 +19,16 @@ const Presenting = {
                 permission: ""
             },
             components: {
-                dept: () => import('../views/tables.vue'),
+                Department: () => import('../views/quwenjia/Department.vue'),
                 program: () => import('../views/tables.vue'),
                 area: () => import('../views/tables.vue'),
-                tax: () => import('../views/tables.vue')
+                tax: () => import('../views/tables.vue'),
+                Personnel:() => import('../views/quwenjia/Personnel.vue')
             },
             children: [
                 {
-                    path: "/dept",
-                    name: "dept",
+                    path: "/Department",
+                    name: "Department",
                     meta: {
                         icon: "",
                         title: "部门设定",
@@ -74,9 +75,9 @@ const Presenting = {
                     }
                 },
                 {
-                    path: "/people",
+                    path: "/Personnel",
                     icon: "",
-                    name: "people",
+                    name: "Personnel",
                     meta: {
                         icon: "",
                         title: '人员主文件设定',
@@ -93,12 +94,17 @@ const Presenting = {
                 icon: "",
                 title: "物料资料",
                 permission: ""
+            },components:{
+                Warehouse:()=>import("../views/quwenjia/Warehouse.vue"),
+                Materialclass:()=>import("../views/quwenjia/Materialclass.vue"),
+                Measure:()=>import("../views/quwenjia/Measure.vue"),
+                Material:()=>import("../views/quwenjia/Material.vue")
             },
             children: [
                 {
-                    path: "/warehouse",
+                    path: "/Warehouse",
                     icon: "",
-                    name: "warehouse",
+                    name: "Warehouse",
                     meta: {
                         icon: "",
                         title: "仓库设定",
@@ -106,9 +112,9 @@ const Presenting = {
                     }
                 }, 
                 {
-                    path: "/materialType",
+                    path: "/Materialclass",
                     icon: "",
-                    name: "materialType",
+                    name: "Materialclass",
                     meta: {
                         icon: "",
                         title: '物料类别设定',
@@ -116,9 +122,9 @@ const Presenting = {
                     }
                 },
                 {
-                    path: "/unit",
+                    path: "/Measure",
                     icon: "",
-                    name: "unit",
+                    name: "Measure",
                     meta: {
                         icon: "",
                         title: '计量单位设定',
@@ -126,9 +132,9 @@ const Presenting = {
                     }
                 },
                 {
-                    path: "/materiaMaster",
+                    path: "/Material",
                     icon: "",
-                    name: "materiaMaster",
+                    name: "Material",
                     meta: {
                         icon: "",
                         title: '物料主文件设定',
@@ -144,12 +150,17 @@ const Presenting = {
                 icon: "",
                 title: "往来资料",
                 permission: ""
+            },components:{
+                Clientclass:()=>import("../views/quwenjia/Clientclass.vue"),
+                Personnel:()=>import("../views/quwenjia/Personnel.vue"),
+                Supplier:()=>import("../views/quwenjia/Personnel.vue"),
+                Supplierclass:()=>import("../views/quwenjia/Supplierclass.vue")
             },
             children: [
                 {
-                    path: "/customerType",
+                    path: "/Clientclass",
                     icon: "",
-                    name: "customerType",
+                    name: "Clientclass",
                     meta: {
                         icon: "",
                         title: "客户类别设定",
@@ -167,9 +178,9 @@ const Presenting = {
                     }
                 },
                 {
-                    path: "/customerMaster",
+                    path: "/Personnel",
                     icon: "",
-                    name: "customerMaster",
+                    name: "Personnel",
                     meta: {
                         icon: "",
                         title: '客户主文件设定',
@@ -187,9 +198,9 @@ const Presenting = {
                     }
                 },
                 {
-                    path: "/supplierType",
+                    path: "/Supplierclass",
                     icon: "",
-                    name: "supplierType",
+                    name: "Supplierclass",
                     meta: {
                         icon: "",
                         title: '供应商类别设定',
@@ -197,9 +208,9 @@ const Presenting = {
                     }
                 },
                 {
-                    path: "/supplierMaster",
+                    path: "/Supplier",
                     icon: "",
-                    name: "supplierMaster",
+                    name: "Supplier",
                     meta: {
                         icon: "",
                         title: '供应商主文件设定',
