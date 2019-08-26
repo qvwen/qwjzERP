@@ -46,7 +46,9 @@
             </el-pagination>
         </el-col>
     </el-footer>
-      <!--   -->   
+    <el-dialog  v-dialogDrag  style="display: black;">
+      ssdfsd
+    </el-dialog>  
   </el-container>
 </template>
 <style>

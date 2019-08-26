@@ -63,15 +63,15 @@ const purchasing = {
                 title: "采购作业",
                 permission:""
             },components: {
-                purchaseStorage: () => import('../views/luoq/purchasereceipt.vue'),
-                // purchaseReturn:() => import('../views/luoq/index.vue'),
-                purchaseReturn:() => import('../views/chenghan/refund.vue'),
-                allowance:() => import('../views/chenghan/allowance.vue'),
-                enquir:() => import('../views/chenghan/enquiry.vue'),
-                purchaseInvoice:() => import('../views/chenghan/purchaseInvoice.vue'),
-                purchasing:()=> import('../views/chenghan/purchasing.vue'),
-                requisition:()=> import('../views/chenghan/requisition.vue'),
-                warehousing:()=> import('../views/chenghan/warehousing.vue')
+                // purchaseStorage: () => import('../views/luoq/purchasereceipt.vue'),
+                // // purchaseReturn:() => import('../views/luoq/index.vue'),
+                // purchaseReturn:() => import('../views/chenghan/refund.vue'),
+                // allowance:() => import('../views/chenghan/allowance.vue'),
+                // enquir:() => import('../views/chenghan/enquiry.vue'),
+                // purchaseInvoice:() => import('../views/chenghan/purchaseInvoice.vue'),
+                // purchasing:()=> import('../views/chenghan/purchasing.vue'),
+                // requisition:()=> import('../views/chenghan/requisition.vue'),
+                // warehousing:()=> import('../views/chenghan/warehousing.vue')
             },
              children:[
                 {
@@ -152,7 +152,7 @@ const purchasing = {
                 title: "分摊作业",
                 permission:""
             },components: {
-                apportionWork:()=>import("../views/luoq/procurementallocation.vue")
+                // apportionWork:()=>import("../views/luoq/procurementallocation.vue")
             },
              children:[
                 {

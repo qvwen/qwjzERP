@@ -1,6 +1,5 @@
 <template>
   <el-container style="height:100vh">
-    
     <el-header>
       <el-menu
         :default-active="activeIndex"
@@ -8,10 +7,10 @@
         mode="horizontal"
         @select="handleSelect"
       >
-        <el-menu-item index="1">
+        <!-- default-active="0" -->
+        <el-menu-item index="18">
           <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
         </el-menu-item>
-
         <!-- disabled -->
         <el-menu-item
           v-for="(temp,index) in menuList"
@@ -22,7 +21,7 @@
           <i :class="temp.icon"></i>
           {{temp.meta.title}}
         </el-menu-item>
-       
+
         <el-submenu index="4">
           <template slot="title">
             <i class="el-icon-document el-icon-left"></i>我的工作台
@@ -38,9 +37,10 @@
             <i class="el-icon-lock"></i>锁屏
           </el-menu-item>
           <el-menu-item index="2-4">
-            <i class="el-icon-switch-button"></i>注销
+            <router-link to="/login" style="text-decoration: none;color:#909399">
+              <i class="el-icon-switch-button"></i>注销
+            </router-link>
           </el-menu-item>
-         
         </el-submenu>
       </el-menu>
     </el-header>
@@ -56,15 +56,12 @@
           @open="handleOpen"
           @close="handleClose"
           :collapse="isCollapse"
-          :router="true"
         >
-         
           <el-submenu
             width="400"
             v-for="(temp,index) in atpresent"
-            :index="index"
+            :index="temp.name"
             v-bind:key="(temp,index)"
-            
           >
             <template slot="title">
               <i class="el-icon-folder-checked"></i>
@@ -76,14 +73,11 @@
               @click="addTab(temp1.name,temp1.meta.title)"
               v-bind:key="(temp1,index1)"
             >{{temp1.meta.title}}</el-menu-item>
-             
           </el-submenu>
-       
         </el-menu>
       </el-aside>
 
       <el-main>
-       
         <el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
           <el-tab-pane
             v-for="item in editableTabs"
@@ -96,10 +90,10 @@
         </el-tabs>
       </el-main>
     </el-container>
-    <el-footer width="200px">
-      <!-- Aside content -->
-      底部
-    </el-footer>
+    <!-- <el-footer width="200px"> -->
+    <!-- Aside content -->
+    <!-- 底部
+    </el-footer>-->
   </el-container>
 </template>
 
@@ -161,7 +155,7 @@ export default {
       currentPage3: 5,
       currentPage4: 4,
       isCollapse: false,
-      menuList:[]
+      menuList: []
     };
   },
   methods: {
@@ -195,8 +189,8 @@ export default {
         });
         this.editableTabsValue = newTabName;
       }
-     
-  //    alert(JSON.stringify(this.editableTabs))
+
+      //    alert(JSON.stringify(this.editableTabs))
     },
     removeTab(targetName) {
       let tabs = this.editableTabs;
@@ -215,20 +209,22 @@ export default {
       this.editableTabs = tabs.filter(tab => tab.name !== targetName);
     },
     atpresents(obj) {
-      // alert(JSON.stringify(obj));
+    // this.atpresent=null;
       this.atpresent = obj;
+      // alert(JSON.stringify(this.atpresent));
     }
   }, //生命周期 - 创建完成（可以访问当前this实例）
-    created() {
-        // alert(JSON.stringify(this.$router.options.routes))
-        this.$router.options.routes.forEach(ele => {
-            if(ele.meta){
-                // console.log(ele)
-                this.menuList.push(ele);
-            }
-         
-        })
-        // alert(JSON.stringify(this.menuList))
-    }
+  created() {
+    // alert(JSON.stringify(this.$router.options.routes))
+    this.$router.options.routes.forEach(ele => {
+      if (ele.meta) {
+        // console.log(ele)
+        this.menuList.push(ele);
+      }
+    });
+    this.atpresent = this.menuList[0].children;
+
+    // alert(JSON.stringify(this.menuList[3]))
+  }
 };
 </script>

@@ -18,8 +18,8 @@ const commonMenu = {
                 title: "冲款作业",
                 permission: ""
             },components: {
-                accountsReceivable: () => import('../views/hejianfu/Accounts.vue'),
-                payable:() => import('../views/chenghan/accountsPayable.vue')
+                // accountsReceivable: () => import('../views/hejianfu/Accounts.vue'),
+                // payable:() => import('../views/chenghan/accountsPayable.vue')
             },
             children: [
                 {
@@ -53,11 +53,11 @@ const commonMenu = {
                 title: "其他应收付作业",
                 permission: ""
             },components:{
-                receivable:() => import('../views/tables.vue'),
-                payableOther:() => import('../views/tables.vue'),
-                yvshoukd:() => import('../views/hejianfu/Inadvanceofvoucher.vue'),
-                Accounts:() => import('../views/hejianfu/Accounts.vue'),
-                aging:() => import('../views/hejianfu/aging.vue')
+                // receivable:() => import('../views/tables.vue'),
+                // payableOther:() => import('../views/tables.vue'),
+                // yvshoukd:() => import('../views/hejianfu/Inadvanceofvoucher.vue'),
+                // Accounts:() => import('../views/hejianfu/Accounts.vue'),
+                // aging:() => import('../views/hejianfu/aging.vue')
             },  
             children: [
                 {
@@ -118,8 +118,8 @@ const commonMenu = {
                 title: "调拨盘点作业",
                 permission: ""
             },components:{
-                allot:() => import('../views/wen/allot.vue'),
-                checkCard:() => import('../views/tables.vue'),
+                // allot:() => import('../views/wen/allot.vue'),
+                // checkCard:() => import('../views/tables.vue'),
             },
             children: [
                 {
@@ -168,7 +168,7 @@ const commonMenu = {
                 title: "调价作业",
                 permission: ""
             },components:{
-                saleInvoiceOut:() => import('../views/tables.vue')
+                // saleInvoiceOut:() => import('../views/tables.vue')
             },
             children: [
                 {

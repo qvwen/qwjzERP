@@ -50,13 +50,13 @@ const commonMenu = {
                 title: "销售作业",
                 permission:""
             },components:{
-                saleInvoice:()=>import("../views/hejianfu/invoiceforsales.vue"),
-                saleEnquiry:()=>import("../views/liaoshuanchen/baojia.vue"),
-                saleOrder:()=>import("../views/liaoshuanchen/dingdan.vue"),
-                saleInvoicef:()=>import("../views/liaoshuanchen/fapiao.vue"),
-                salesReturn:()=>import("../views/yangkaibo/returnAdd.vue"),
-                saleInvoicez:()=>import("../views/liaoshuanchen/zherang.vue"),
-                saleStorage:()=>import("../views/yangkaibo/out.vue")
+                // saleInvoice:()=>import("../views/hejianfu/invoiceforsales.vue"),
+                // saleEnquiry:()=>import("../views/liaoshuanchen/baojia.vue"),
+                // saleOrder:()=>import("../views/liaoshuanchen/dingdan.vue"),
+                // saleInvoicef:()=>import("../views/liaoshuanchen/fapiao.vue"),
+                // salesReturn:()=>import("../views/yangkaibo/returnAdd.vue"),
+                // saleInvoicez:()=>import("../views/liaoshuanchen/zherang.vue"),
+                // saleStorage:()=>import("../views/yangkaibo/out.vue")
             },
             children:[
                 {
@@ -149,10 +149,10 @@ const commonMenu = {
                 title: "常用报表",
                 permission:""
             },components:{
-                ReceivablesDetailed:()=>import("../views/yangkaibo/ReceivablesDetailed.vue"),
-                CustomerReceiptDetailed:()=>import("../views/yangkaibo/CustomerReceiptDetailed.vue"),
-                SalesmanReceiptDetailed:()=>import("../views/yangkaibo/SalesmanReceiptDetailed.vue"),
-                profitQuery:()=>import("../views/yangkaibo/profitQuery.vue")
+                // ReceivablesDetailed:()=>import("../views/yangkaibo/ReceivablesDetailed.vue"),
+                // CustomerReceiptDetailed:()=>import("../views/yangkaibo/CustomerReceiptDetailed.vue"),
+                // SalesmanReceiptDetailed:()=>import("../views/yangkaibo/SalesmanReceiptDetailed.vue"),
+                // profitQuery:()=>import("../views/yangkaibo/profitQuery.vue")
             },
             children:[
                 {

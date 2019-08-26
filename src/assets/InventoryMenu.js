@@ -50,8 +50,8 @@ const InventoryMenu = {
                 title: "其他出入库作业",
                 permission:""
             },components:{
-                intostock:() => import('../views/wen/intostock.vue'),
-                outstocks:() => import('../views/liaoshuanchen/chuku.vue')
+                // intostock:() => import('../views/wen/intostock.vue'),
+                // outstocks:() => import('../views/liaoshuanchen/chuku.vue')
             },
              children:[
                 {
@@ -85,8 +85,8 @@ const InventoryMenu = {
                 permission:""
             },
             components:{
-                checks: () =>  import('../views/wen/stocking.vue'),
-                allots:() =>  import('../views/wen/allot.vue')
+                // checks: () =>  import('../views/wen/stocking.vue'),
+                // allots:() =>  import('../views/wen/allot.vue')
             },
              children:[
                 {
@@ -130,7 +130,7 @@ const InventoryMenu = {
                 permission:""
             },
             components:{
-                saleInvoiceOuts: () =>  import('../views/wen/stockaccount.vue') 
+                // saleInvoiceOuts: () =>  import('../views/wen/stockaccount.vue') 
             },
              children:[
                 {

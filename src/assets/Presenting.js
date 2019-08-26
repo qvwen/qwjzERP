@@ -19,11 +19,11 @@ const Presenting = {
                 permission: ""
             },
             components: {
-                Department: () => import('../views/quwenjia/Department.vue'),
-                program: () => import('../views/tables.vue'),
-                area: () => import('../views/tables.vue'),
-                tax: () => import('../views/tables.vue'),
-                Personnel:() => import('../views/quwenjia/Personnel.vue')
+                // Department: () => import('../views/quwenjia/Department.vue'),
+                // program: () => import('../views/tables.vue'),
+                // area: () => import('../views/tables.vue'),
+                // tax: () => import('../views/tables.vue'),
+                // Personnel:() => import('../views/quwenjia/Personnel.vue')
             },
             children: [
                 {
@@ -95,10 +95,10 @@ const Presenting = {
                 title: "物料资料",
                 permission: ""
             },components:{
-                Warehouse:()=>import("../views/quwenjia/Warehouse.vue"),
-                Materialclass:()=>import("../views/quwenjia/Materialclass.vue"),
-                Measure:()=>import("../views/quwenjia/Measure.vue"),
-                Material:()=>import("../views/quwenjia/Material.vue")
+                // Warehouse:()=>import("../views/quwenjia/Warehouse.vue"),
+                // Materialclass:()=>import("../views/quwenjia/Materialclass.vue"),
+                // Measure:()=>import("../views/quwenjia/Measure.vue"),
+                // Material:()=>import("../views/quwenjia/Material.vue")
             },
             children: [
                 {
@@ -151,10 +151,10 @@ const Presenting = {
                 title: "往来资料",
                 permission: ""
             },components:{
-                Clientclass:()=>import("../views/quwenjia/Clientclass.vue"),
-                Personnel:()=>import("../views/quwenjia/Personnel.vue"),
-                Supplier:()=>import("../views/quwenjia/Personnel.vue"),
-                Supplierclass:()=>import("../views/quwenjia/Supplierclass.vue")
+                // Clientclass:()=>import("../views/quwenjia/Clientclass.vue"),
+                // Personnel:()=>import("../views/quwenjia/Personnel.vue"),
+                // Supplier:()=>import("../views/quwenjia/Personnel.vue"),
+                // Supplierclass:()=>import("../views/quwenjia/Supplierclass.vue")
             },
             children: [
                 {
