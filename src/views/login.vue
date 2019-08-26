@@ -1,4 +1,4 @@
- <template>
+<template>
     <div class="login-container">
         <el-form :model="ruleForm2" :rules="rules2"
          status-icon
