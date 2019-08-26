@@ -66,6 +66,7 @@
 export default {
     data() {
         return {
+            data:"2019-08-26",
             tableData: [{
                 date: '2016-05-02',
                 name: '1',

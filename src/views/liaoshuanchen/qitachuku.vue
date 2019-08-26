@@ -91,7 +91,7 @@
         </el-tabs>
     </el-form>
 
-    <el-form :label-position="labelPosition" label-width="100px" size="mini" style="margin-top:20px;">
+    <el-form label-width="100px" size="mini" style="margin-top:20px;">
         <el-col :span="10">
             <el-form-item label="出库人员">
                 <el-input v-model="input"></el-input>
@@ -140,6 +140,7 @@ export default {
             user: "",
             input: "",
             marriage: "",
+            data:"2019-08-26",
             grouping: "",
             checkList: [],
             tableData: [{

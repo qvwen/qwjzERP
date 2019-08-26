@@ -54,6 +54,7 @@ export default {
         return {
             tableData: [{
                 date: '2016-05-02',
+                data:"2019-08-26",
                 name: '1',
                 province: '2',
                 city: '普陀区',

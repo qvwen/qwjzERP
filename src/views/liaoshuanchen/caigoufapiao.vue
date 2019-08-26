@@ -196,7 +196,7 @@
                     <el-col :span="12">
                         <el-form-item label="账款月份">
                             <div class="block">
-                                <el-date-picker v-model="value2" type="month" placeholder="选择月"> </el-date-picker>
+                                <el-date-picker v-model="data" type="month" placeholder="选择月"> </el-date-picker>
                             </div>
                         </el-form-item>
                     </el-col>
@@ -224,7 +224,7 @@
         </el-tabs>
     </el-form>
 
-    <el-form :label-position="labelPosition" label-width="100px" size="mini" style="margin-top:20px;">
+    <el-form  label-width="100px" size="mini" style="margin-top:20px;">
         <el-col :span="10">
             <el-form-item label="采购人员">
                 <el-input v-model="input"></el-input>
@@ -299,6 +299,7 @@ export default {
             user: "",
             input: "",
             marriage: "",
+            data:"2019-08-26",
             grouping: "",
             checkList: [],
             tableData: [{

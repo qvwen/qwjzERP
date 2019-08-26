@@ -2,7 +2,7 @@
 <template>
     <div>
        <h3>销售发票单</h3>
-       <el-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign" size="mini">
+       <el-form  label-width="100px" size="mini">
        <el-row :gutter="20">
            <el-col :span="12">  
                <el-form-item label="客户">
@@ -226,7 +226,7 @@
         </el-tabs>
   </el-form>
 
-<el-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign" size="mini" style="margin-top:20px;">
+<el-form  label-width="100px" size="mini" style="margin-top:20px;">
   <el-col :span="10">  
         <el-form-item label="业务人员">
             <el-input v-model="input"></el-input>
@@ -297,6 +297,7 @@
           input:"",
           marriage:"",
           grouping:"",
+          data:"2019-08-26",
           checkList: [],
           tableData: [{
           date: '2016-05-02',
